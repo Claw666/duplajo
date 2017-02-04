@@ -1544,7 +1544,7 @@ body.mobile .animated {
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  max-width: 20%;
+  width: 150px;
   margin: 0 auto;
 }
 .button {
