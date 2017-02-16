@@ -2,6 +2,8 @@
 			<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
 			<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
 			<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US">  <!--<![endif]-->
+
+			<!--Elephant by http://codepen.io/lurtt/pen/MYxovw-->
 			<head>
 
 				<!-- META DATA -->
@@ -38,7 +40,7 @@
 
 				<!-- JS -->
 				<script type="text/javascript" src="js/modernizr.js"></script>
-				<script type="text/javascript" src="js/heart.js"></script>
+				<script type="text/javascript" src="js/snap.svg-min.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 				<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!--[if lt IE 9]>
@@ -51,11 +53,22 @@
 			<![endif]-->
 
 		</head>
-		<body >
+		<body class="image/*-*/background"  >
+
+			<!-- Preloader -->
+			<div id="preloader">
+				<div id="loading-animation">&nbsp;</div>
+			</div>
+			<!-- /Preloader -->
+
+			<!-- Overlay -->
+			<div id="section-home" class="home-section-wrap center">
+				<div class="section/*-*/overlay"></div>
+			</div>
+			<!-- /Overlay -->
 
 			<!-- container -->
 			<div class="containers">
-				<div class="bg_heart">
 				<!-- main -->
 				<div class="main">
 					<!-- header -->
@@ -86,21 +99,22 @@
 															<!-- Clock Countdown -->
 															<div id="clock-countdown" class="animated bounceInDown" data-animation-delay="700"></div>
 														</div>
-														<div class="btn_cont animated bounceInUp">
+														<div class="btn_cont">
 															<a href="http://csongorkocsis.me/polaroid/"><div class="button">SUPRISE</div></a>
 														</div>
-														<div class="elephant animated bounceInUp">
+														<div class="elephant">
 															<img src="images/elephantx.png">
 														</div>
 														
 														<!-- copyright -->
 														<footer class="copy-right animated bounceInUp" data-animation-delay="700">
 															<div class="copyright">
-																© 2017 Created by <a href="http://csongorkocsis.me">SCHONKO</a> - All Rights Reserved.
+																© 2016 Created by <a href="http://csongorkocsis.me">SCHONKO</a> - All Rights Reserved.</a>
 															</div>
 														</footer><!-- /copyright -->
 
 													</div><!-- /content slide -->
+												</div>
 											</div><!-- /row -->
 										</div><!-- /container -->
 									</div>
@@ -112,7 +126,6 @@
 					</div>
 				</section><!-- /section -->  
 			</div><!-- /main -->
-			</div>
 		</div><!-- /container -->        
 
 		<!-- JS -->
@@ -123,7 +136,15 @@
 		<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
 		<script type="text/javascript" src="js/jquery.parallaxify.min.js"></script>
 		<script type="text/javascript" src="js/jquery.particleground.min.js"></script>
+		<script type="text/javascript" src="js/vegas.min.js"></script>
+		<script type="text/javascript" src="js/trianglify.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
 		<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/jquery.appear.js"></script>
+		<script type="text/javascript" src="js/classie.js"></script>
+		<script type="text/javascript" src="js/sidebar.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 
 	</body>
