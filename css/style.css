@@ -443,3 +443,136 @@ body.mobile .animated {
 		    opacity: .9;
 		  }
 		}
+
+
+.sun {
+  height: 0;
+  position: relative;
+  float: right;
+  right: 60px;
+  top: 30px;
+}
+.sun .sunrays {
+  -webkit-animation: spin 15s linear infinite;
+  -moz-animation: spin 15s linear infinite;
+  animation: spin 15s linear infinite;
+  box-shadow: 0px 0px 100px #ffe77d;
+  height: 130px;
+  width: 130px;
+}
+
+.circle {
+  height: 130px;
+  width: 130px;
+  z-index: 1;
+  background: #ffe77d;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.sunrays span {
+  background: #FFDD4A;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.sunrays span:first-child {
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.sunrays span:nth-child(2) {
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.eyes {
+  position: relative;
+  top: 50px;
+  z-index: 2;
+}
+.eyes .left, .eyes .right {
+  background: black;
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  -webkit-animation: blink 2.5s linear infinite;
+  -moz-animation: blink 2.5s linear infinite;
+  animation: blink 2.5s linear infinite;
+}
+.eyes .left {
+  left: 47%;
+}
+.eyes .right {
+  left: 15%;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes blink {
+  0% {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+  }
+  5% {
+    height: 1px;
+    width: 8px;
+    border-radius: 0;
+  }
+  10% {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+  }
+}
+
+
+@media (max-width:640px){
+.sun {
+    right: 20px;
+    top: -65px;
+}
+	
+.sun .sunrays {
+  height: 60px;
+  width: 60px;
+}
+
+.circle {
+  height: 60px;
+  width: 60px;
+}
+
+.sunrays span {
+  width: 60px;
+  height: 60px;
+
+}
+.eyes {
+  top: 10px;
+
+}
+.logo-site {
+	margin-top: 50px;
+}
+
+}
