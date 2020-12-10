@@ -1,143 +1,329 @@
-			<!DOCTYPE html>
-			<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
-			<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
-			<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US">  <!--<![endif]-->
-			<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<style>
+    .fill { 
+    min-height: 100%;
+    height: 100%;
+    }
+    html, body {
+        height: 100%;
+    }
+    .days-digit {
+        font-size: 10em;
+        padding: 0;
+        max-height: 185px;
+    }
+    .digits {
+        max-width:350px;
+        max-height: 185px;
+    }
+    .days-txt {
+        padding-top: 75px;
+        text-align: left;
+    }
+    .time-txt {
+        padding-top: 20px;
+    }
+    /*--------------------
+Boarding Pass
+--------------------*/
+.boarding-pass {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 350px;
+  height: 280px;
+  background: #fff;
+  color: #000000;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-transform: uppercase;
+  /*--------------------
+  Header
+  --------------------*/
+  /*--------------------
+  Cities
+  --------------------*/
+  /*--------------------
+  Infos
+  --------------------*/
+  /*--------------------
+  Strap
+  --------------------*/
+}
+.boarding-pass small {
+  display: block;
+  font-size: 11px;
+  color: #A2A9B3;
+  margin-bottom: 2px;
+}
+.boarding-pass strong {
+  font-size: 15px;
+  display: block;
+}
+.boarding-pass header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#36475f), to(#2c394f));
+  background: linear-gradient(to bottom, #36475f, #2c394f);
+  padding: 12px 20px;
+  height: 53px;
+}
+.boarding-pass header .logo {
+  float: left;
+  width: 104px;
+  height: 31px;
+}
+.boarding-pass header .flight {
+  float: right;
+  color: #fff;
+  text-align: right;
+}
+.boarding-pass header .flight small {
+  font-size: 8px;
+  margin-bottom: 2px;
+  opacity: 0.8;
+}
+.boarding-pass header .flight strong {
+  font-size: 18px;
+}
+.boarding-pass .cities {
+  position: relative;
+}
+.boarding-pass .cities::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.boarding-pass .cities .city {
+  padding: 20px 18px;
+  float: left;
+}
+.boarding-pass .cities .city:nth-child(2) {
+  float: right;
+}
+.boarding-pass .cities .city strong {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+}
+.boarding-pass .cities .city small {
+  margin-bottom: 0px;
+  margin-left: 3px;
+}
+.boarding-pass .cities .airplane {
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  top: 57%;
+  left: 30%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: move 4s infinite;
+          animation: move 4s infinite;
+}
+@-webkit-keyframes move {
+  40% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: 70%;
+    opacity: 0;
+  }
+}
+@keyframes move {
+  40% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: 70%;
+    opacity: 0;
+  }
+}
+.boarding-pass .infos {
+  display: -webkit-box;
+  display: flex;
+  border-top: 1px solid #99D298;
+}
+.boarding-pass .infos .places,
+.boarding-pass .infos .times {
+  width: 50%;
+  padding: 10px 0;
+}
+.boarding-pass .infos .places::after,
+.boarding-pass .infos .times::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.boarding-pass .infos .times strong {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+.boarding-pass .infos .places {
+  background: #E2EFE2;
+  border-right: 1px solid #99D298;
+}
+.boarding-pass .infos .places small {
+  color: #97A1AD;
+}
+.boarding-pass .infos .places strong {
+  color: #239422;
+}
+.boarding-pass .infos .box {
+  padding: 10px 20px 10px;
+  width: 47%;
+  float: left;
+}
+.boarding-pass .infos .box small {
+  font-size: 10px;
+}
+.boarding-pass .strap {
+  clear: both;
+  position: relative;
+  border-top: 1px solid #99D298;
+}
+.boarding-pass .strap::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.boarding-pass .strap .box {
+  padding: 23px 0 20px 20px;
+}
+.boarding-pass .strap .box div {
+  margin-bottom: 15px;
+}
+.boarding-pass .strap .box div small {
+  font-size: 10px;
+}
+.boarding-pass .strap .box div strong {
+  font-size: 13px;
+}
+.boarding-pass .strap .box sup {
+  font-size: 8px;
+  position: relative;
+  top: -5px;
+}
+.boarding-pass .strap .qrcode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+}
 
-				<!-- META DATA -->
-				<meta charset="utf-8">
-				<meta http-equiv="X-UA-Compatible" content="IE=edge">
-				<meta http-equiv="content-type" content="text/html;charset=UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-				<meta property="og:image" content="images/elephant.png" />
-				<link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
-				<link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
-				<link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
-				<link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
-				<link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
-				<link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
-				<link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
-				<link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
-				<link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
-				<link rel="icon" type="image/png" sizes="192x192"  href="images/icon/android-icon-192x192.png">
-				<link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
-				<link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
-				<link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
-				<link rel="manifest" href="images/icon/manifest.json">
-				<meta name="msapplication-TileColor" content="#ffffff">
-				<meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
-				<meta name="theme-color" content="#ffffff">
-				<!-- Title -->
-				<title>Duplajó</title>
+</style>
+</head>
+<body>
+  
+<div class="container-fluid fill bg-dark text-white p-5">
+  <div class="row text-center digits mx-auto">
+      <div class="col-3"></div>
+      <div id="days" class="col-6 days-digit"></div>
+      <div class="col-3 days-txt">DAYS</div>
+  </div>
+  <div class="row time-txt text-center"><span id="rem-time">14H 05MIN 12S</span></div>
+  <div class="boarding-pass">
+    <header>
+      <svg class="logo">
+        <use xlink:href="#alitalia"></use>
+      </svg>
+      <div class="flight">
+        <small>flight</small>
+        <strong>CSK-BEA 0822</strong>
+      </div>
+    </header>
+    <section class="cities">
+      <div class="city">
+        <small>Eindhoven</small>
+  
+        <strong>EIN</strong>
+      </div>
+      <div class="city">
+        <small>Budapest</small>
+  
+        <strong>BUD</strong>
+      </div>
+      <svg class="airplane">
+        <use xlink:href="#airplane"></use>
+      </svg>
+    </section>
 
+    <section class="strap">
+      <div class="box">
+        <div class="passenger">
+          <small>passenger</small>
+          <strong>Csongor Kocsis</strong>
+        </div>
+        <div class="date">
+          <small>Date</small>
+          <strong>Sat, 19 december 2020</strong>
+        </div>
+      </div>
+      <svg class="qrcode">
+        <use xlink:href="#qrcode"></use>
+      </svg>
+    </section>
+</div>
+</div>
+  
+  
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+    
+    <symbol  id="airplane" viewBox="243.5 245.183 25 21.633">
+      <g>
+        <path fill="#30af2f" d="M251.966,266.816h1.242l6.11-8.784l5.711,0.2c2.995-0.102,3.472-2.027,3.472-2.308
+                                c0-0.281-0.63-2.184-3.472-2.157l-5.711,0.2l-6.11-8.785h-1.242l1.67,8.983l-6.535,0.229l-2.281-3.28h-0.561v3.566
+                                c-0.437,0.257-0.738,0.724-0.757,1.266c-0.02,0.583,0.288,1.101,0.757,1.376v3.563h0.561l2.281-3.279l6.535,0.229L251.966,266.816z
+                                "/>
+      </g>
+    </symbol>
+    
+  </svg>
 
-				<!-- CSS Global Compulsory -->
-				<link rel="stylesheet" href="css/bootstrap.min.css">
-				<link rel="stylesheet" href="css/style.css" >
-
-				<!-- CSS Implementing Plugins -->
-				<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-				<link rel="stylesheet" type="text/css" href="css/ionicons.min.css" />
-				<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
-				<link rel="stylesheet" type="text/css" href="css/menu.css" />
-
-				<!-- Fonts -->	
-				<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-				<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
-
-
-				<!-- JS -->
-				<script type="text/javascript" src="js/modernizr.js"></script>	
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-				<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-			<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="http://webnextbd.net/demo/js/respond.min.js"></script>
-			<![endif]-->
-
-			<!--[if lt IE 11]>
-			<link rel="stylesheet" type="text/css" href="http://webnextbd.net/demo/css/ie.css">
-			<![endif]-->
-
-		</head>
-		<body >
-
-			<!-- container -->
-			<div class="containers"> 
-				<!-- main -->
-				<div class="main">
-					<!-- header -->
-					<header class="header-site">
-						<div class="sun">
-							  <div class="circle"></div>
-							  <div class="eyes">
-							    <span class="left"></span>
-							    <span class="right"></span>
-							  </div>
-							  <div class="sunrays">
-							    <span />
-							    <span />
-							    <span />
-							  </div>
-							</div>
-						<div class="logo-site animated zoomIn">
-							<h1>DuplaJó</h1>
-						</div>
-					</header>
-					<!-- /header -->
-
-					<!-- section -->                 
-					<section class="section fullscreen site-main">
-						<div class="container-section">
-							<div class="container-table">
-								<div class="content-table">
-									<!-- bt-carousel -->
-									<div class="bt-carousel">
-
-										<!-- home section -->
-										<div class="item-slide show">
-											<!-- container -->
-											<div class="container">
-												<div class="row">
-													<div class="col-md-10 col-md-offset-1">
-														<div class="month_cont animated fadeIn">
-															<h1 class="animated pulse infinite month">8th <br> Month</h1>
-														</div>
-														<div class="content-slide">
-															<!-- Clock Countdown -->
-															<div id="clock-countdown" class="animated zoomIn"></div>
-														</div>
-														<div class="btn_cont animated zoomIn">
-															<a href="http://csongorkocsis.me/polaroid/"><div class="button">PHOTOS</div></a>
-														</div>
-														
-														<!-- copyright -->
-														<footer class="copy-right">
-															<div class="copyright">
-																© 2017 Created by <a href="http://csongorkocsis.me">SCHONKO</a> - All Rights Reserved.
-															</div>
-														</footer><!-- /copyright -->
-													</div>
-											</div><!-- /row -->
-										</div><!-- /container -->
-									</div>
-									<!-- /home section -->
-
-								</div><!-- /bt-carousel -->
-							</div>
-						</div>
-					</div>
-				</section><!-- /section -->  
-			</div><!-- /main -->
-		</div><!-- /container -->        
-
-		<!-- JS -->
-		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/retina.min.js"></script>
-		<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
-		<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-
-	</body>
-	</html>
+</body>
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 19, 2020 16:40:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("rem-time").innerHTML = + hours + "H "
+      + minutes + "MIN " + seconds + "S ";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+</html>
